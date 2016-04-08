@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>movil</title>
+        <link rel="stylesheet" href="estilo.css">
+        <script>
+            var arreglo = new Array();
+            function guardar()
+            {
+                 arreglo[0]= document.getElementById('nam').value;
+                 arreglo[1]= document.getElementById('tel').value;
+                 arreglo[2]= document.getElementById('dir').value;
+                 console.info(arreglo)
+            }
+            function buscar()
+            {
+                document.getElementById('nam').value=arreglo[0];
+                document.getElementById('tel').value=arreglo[1];
+                document.getElementById('dir').value=arreglo[2];
+            }
+            function borrar()
+            {
+                var a = "";
+                document.getElementById('nam').value = a;
+                document.getElementById('tel').value = a;
+                document.getElementById('dir').value = a;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h2>formulario</h2>
+        </div>
+
+        <div class="contenedor">
+            <p>Nombre</p>
+            <input type="text" id="nam">
+            <p>Telefono</p>
+            <input type="text" id="tel">
+            <p>Direccion</p>
+            <input type="text" id="dir">
+
+            <input type="submit" value="borrar" onclick="borrar()">
+            <input type="submit" value="guardar" onclick="guardar()">
+            <input type="submit" value="buscar" onclick="buscar()">
+        </div>
+    </body>
+</html>
